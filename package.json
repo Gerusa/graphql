@@ -1,0 +1,12 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Gerusa/graphql.git",
+  "author": "Gerusa Soares <gerusa.freitas@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.6.0"
+  }
+}
