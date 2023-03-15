@@ -1,7 +1,8 @@
 # Projeto graphql
 
-* Projeto para estudo do GraphQL, desenvolvido conforme instruções: https://www.youtube.com/watch?v=7RoHxSGVAdU&list=PLPXWI3llyMiK9uw7tfljM2hnQl2qu6CeT
+* Projeto para estudo de API GraphQL, desenvolvido conforme instruções: https://www.youtube.com/watch?v=7RoHxSGVAdU&list=PLPXWI3llyMiK9uw7tfljM2hnQl2qu6CeT
 * Instalada a extensão GraphQL no vsCode, para melhor visualização do código.
+* As regras de inicialização do servidor (apollo) estão dentro do startServer.js
 * No package.json, foi adicionado o script 'dev' para que o servidor possa ser iniciado com o comando 'yarn dev', no lugar de 'node src/index.js'
 
 ## Info Gerais do GraphQL
@@ -23,3 +24,5 @@
     * 'yarn add apollo-server graphql': está instalando o 'apollo-server' e o 'graphql'
         * O Apollo é uma implementação bem completa do GraphQL, que já tem as ferramentas necessárias, começando pelo principal: um servidor GraphQL.
     * 'node src/index.js' ou 'yarn dev': execução do index. Isso abre o Playground GraphQL.
+    * 'yarn add @babel/core @babel/preset-env @babel/node -D': (-D indica que é uma dependência de desenvolvimento)
+    * yarn add nodemon -D
