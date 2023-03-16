@@ -5,6 +5,10 @@
 * As regras de inicialização do servidor (apollo) estão dentro do startServer.js
 * No package.json, foi adicionado o script 'dev' para que o servidor possa ser iniciado com o comando 'yarn dev', no lugar de 'node src/index.js'
 
+### Pré Requisitos
+
+* MongoDB rodando em 'mongodb://localhost:27017/graphql'
+
 ## Info Gerais do GraphQL
 
 * Toda requisição é POST
@@ -26,3 +30,4 @@
     * 'node src/index.js' ou 'yarn dev': execução do index. Isso abre o Playground GraphQL.
     * 'yarn add @babel/core @babel/preset-env @babel/node -D': (-D indica que é uma dependência de desenvolvimento)
     * yarn add nodemon -D
+    * 'yarn add mongoose' para fazer uso do banco de dados mongoDB
