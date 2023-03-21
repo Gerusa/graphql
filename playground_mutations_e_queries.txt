@@ -1,0 +1,68 @@
+** comandos executados no playground do graphql
+
+* Users
+
+// cria um usuário e retorna seu id:
+mutation {
+  createUser(data: {
+    firstName: "Gerusa",
+    lastName: "Soares",
+    email: "geso@teste.com",
+    active: true
+  }) {
+    _id
+  }
+}
+
+// atualiza um usuário
+mutation {
+  updateUser(id: "6419ed8d9afaada7d4550a8c", data: {
+    firstName: "Gerusa"
+    lastName: "de Freitas Soares"
+    email: "geso@teste.com"
+    active: true
+  }) {
+    _id
+    firstName
+    lastName
+  }
+}
+
+// consulta todos os usuários
+query {
+  users {
+    _id
+    firstName
+    lastName 
+    fullName
+  }
+}
+
+// deleta um usuário por id informado
+mutation {
+  deleteUser(id: "6419e886324d5b4c0d5b1016")
+}
+
+
+* Posts
+
+// cria um post
+mutation CreatePost($data: PostInput!) {
+  createPost(data: {
+    title: "Orientação a Objetos",
+    content: "Conteúdo sobre O.O",
+    author: "6419ed8d9afaada7d4550a8c"
+  }) {
+    _id
+  }
+}
+
+// consulta todos os posts
+query Posts {
+  posts {
+    title
+    author {
+      fullName
+    }
+  }
+}

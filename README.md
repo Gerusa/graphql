@@ -3,7 +3,7 @@
 * Projeto para estudo de API GraphQL, desenvolvido conforme instruções: https://www.youtube.com/watch?v=7RoHxSGVAdU&list=PLPXWI3llyMiK9uw7tfljM2hnQl2qu6CeT
 * Instalada a extensão GraphQL no vsCode, para melhor visualização do código.
 * As regras de inicialização do servidor (apollo) estão dentro do startServer.js
-* No package.json, foi adicionado o script 'dev' para que o servidor possa ser iniciado com o comando 'yarn dev', no lugar de 'node src/index.js'
+* No package.json, foi adicionado o script 'dev' para que o servidor possa ser iniciado com o comando 'yarn dev', no lugar de 'node src/index.js'. O comando '-e js,gql' é para que toda alteração em arquivo js e gql reinicie o servidor.
 
 ### Pré Requisitos
 
@@ -17,6 +17,7 @@
     * Mutation: para manipulação de informações/ dados (Equivalente ao POST/PUT/PATCH/DELETE do REST)
 * Scalar Types: String, Int, Boolean, Float e ID(é o identificador do objeto, independente do tipo)
 * Playground GraphQL: equivale ao Insomnia/ Postman do REST. Obs: é possível usar essas ferramentas no lugar do playground.
+* Os 'schema' geram o database e collections no banco
 
 ## Comandos utilizados
 
@@ -31,3 +32,5 @@
     * 'yarn add @babel/core @babel/preset-env @babel/node -D': (-D indica que é uma dependência de desenvolvimento)
     * yarn add nodemon -D
     * 'yarn add mongoose' para fazer uso do banco de dados mongoDB
+    * 'yarn add merge-graphql-schemas': junta todos os schemas e 'joga' no apollo
+    * 'yarn add graphql@15.8.0': versão alterada de '16.6.0' para '15.8.0' devido erro 'const comment = graphql.getDescription(node, { commentDescriptions: true });' relacionado aos merges de schemas

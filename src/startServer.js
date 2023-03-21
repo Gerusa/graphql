@@ -7,7 +7,8 @@ import mongoose, { Mongoose } from 'mongoose';
 function startServer({ typeDefs, resolvers }) {
     // conexao com o banco
     // os parametros sao para nao apresentar os warns quando startar a aplicacao
-    mongoose.connect('mongodb://localhost:27017/graphql', {
+    // foi necessario trocar 'localhost' por '127.0.0.1' para resolver problema de conexao com o banco
+    mongoose.connect('mongodb://127.0.0.1:27017/graphql', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
