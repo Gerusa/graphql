@@ -1,7 +1,7 @@
 // importando o apollo
-import { ApolloServer } from 'apollo-server';
+import { ApolloServer, PubSub } from 'apollo-server';
 
-import mongoose, { Mongoose } from 'mongoose';
+import mongoose from 'mongoose';
 
 // function para iniciar o servidor
 function startServer({ typeDefs, resolvers }) {
@@ -13,8 +13,12 @@ function startServer({ typeDefs, resolvers }) {
         useUnifiedTopology: true,
     });
 
+    // o pubsub vai ajudar a criar o tunel de websocket para enviar info do backend para os clientes que estao conectados no canal
+    const pubsub = new PubSub();
+
     // instancia o servidor
-    const server = new ApolloServer({typeDefs, resolvers });
+    // context eh uma forma de compartilhar a informacao entre todos os resolvers da aplicacao
+    const server = new ApolloServer({typeDefs, resolvers, context: { pubsub } });
     server.listen().then(({ url }) => console.log(`Server started at ${url}`));
 
 }

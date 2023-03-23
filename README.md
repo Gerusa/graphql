@@ -17,7 +17,9 @@
     * Mutation: para manipulação de informações/ dados (Equivalente ao POST/PUT/PATCH/DELETE do REST)
 * Scalar Types: String, Int, Boolean, Float e ID(é o identificador do objeto, independente do tipo)
 * Playground GraphQL: equivale ao Insomnia/ Postman do REST. Obs: é possível usar essas ferramentas no lugar do playground.
-* Os 'schema' geram o database e collections no banco
+* Os 'schema' geram o database e collections no banco.
+* Subscriptions é a forma de trabalhar com WebSockets - real time - dentro do GraphQL.
+    * Não funcionou pois na versão 3 do Apollo Server o suporte a Subscriptions foi descontinuado.
 
 ## Comandos utilizados
 
