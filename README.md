@@ -11,6 +11,7 @@
 
 ## Info Gerais do GraphQL
 
+* GraphQL é uma linguagem de consulta e ambiente de execução voltada a servidores para as APIs, cuja prioridade é fornecer exatamente os dados que os clientes solicitam e nada além. Isso torna as APIs mais rápidas, flexíveis e intuitivas para os desenvolvedores.
 * Toda requisição é POST
 * Toda request bate no MESMO endpoint (/graphql). Então como a API sabe qual requisição está sendo acionada? É através de strings enviadas dentro do corpo da requisição:
     * Query: para obtenção de informações/ dados (Equivalente ao GET do REST)
